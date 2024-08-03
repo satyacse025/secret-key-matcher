@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   * {
+    box-sizing: border-box;
+}
+
+/* Container for flexboxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+    flex: 49%;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+#generate-button {
+    background-color: #0069D9;
+    width: 200px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#secret-text-button {
+    background-color: #383463;
+    width: 200px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+#pin-text-button {
+    background-color: #383463;
+    width: 200px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.grid-container-right {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-container-right>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#div-X {
+    background-color: bisque;
+}
+
+#div-submit {
+    background-color: #218838;
+    color: white;
+}
+
+#div-clear {
+    background-color: #C82333;
+    color: white;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+    .column {
+        flex: 50%;
+    }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .grid-container-right {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        padding: 10px;
+    }
+}
